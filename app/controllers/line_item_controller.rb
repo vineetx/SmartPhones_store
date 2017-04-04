@@ -12,6 +12,7 @@ class LineItemController < ApplicationController
 		current_cart.price += line_item.product.price
 		current_cart.save
 		redirect_to root_path
+		flash[:notice] = "Cart updated successfully"
 		
 	end
 
