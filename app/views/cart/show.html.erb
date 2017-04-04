@@ -1,0 +1,22 @@
+<table>
+	<thead>
+		<tr>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+		</tr>
+	</thead>
+		<tbody>
+			<% @show.each do |item| %>
+			<tr>
+				<td><%=image_tag(item.product.image, :width => "240")%></td>
+				<td><%= item.product.name %></td>
+				<td><%= item.product.description %></td>
+				<td><%= item.product.price %></td>
+				<td><%= link_to 'Destroy', line_item_destroy_path(product: item.product), method: :delete %></td>
+				<% end %>
+			</tr>
+		</tbody>
+</table>
