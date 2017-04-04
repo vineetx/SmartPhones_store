@@ -9,7 +9,7 @@ class LineItemController < ApplicationController
 			line_item.quantity = 1
 		end
 		line_item.save
-		current_cart.price += line_item.product.price
+		current_cart.price = current_cart.price + line_item.product.price
 		current_cart.save
 		redirect_to root_path
 		flash[:notice] = "Cart updated successfully"
