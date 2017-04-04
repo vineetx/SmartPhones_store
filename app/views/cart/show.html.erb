@@ -17,6 +17,9 @@
 <div class="col-md-4">
 
 </div>
-<div class="col-md-4">
-<button>Checkout <span class="cart-count"><%= @total %></button></span>
+<div class="col-md-4 check">
+<strong>Total: </strong><%= @total %></br>
+<button><%= link_to 'Checkout', order_new_path %></button>
 </div>
+
+

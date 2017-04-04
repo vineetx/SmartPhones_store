@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   get 'carts/show', to: 'cart#show'
   post 'line_item', to: 'line_item#create'
   delete 'line_item/destroy', to: 'line_item#destroy'
+  get 'order/new', to: 'order#new'
+  post 'order/create', to: 'order#create'
 end
