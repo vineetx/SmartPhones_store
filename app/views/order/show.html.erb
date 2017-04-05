@@ -1,0 +1,48 @@
+<div class="row">
+<div class="col-md-4" >
+<table>
+  <tr>
+    <th>Image</th>
+    <th>Details</th>
+  </tr>
+  <tbody>
+    <% @total ||=0 %>
+	   <% @order.cart.line_items.each do  |item|%>
+	   <tr><td><%=image_tag(item.product.image, :width => "180")%></td>
+	   <td><strong>Name: </strong><%= item.product.name %></br>
+	     <strong>Description: </strong><%= item.product.description %></br>
+	     <strong>Quantity: </strong><%= item.quantity %></br>
+	     <% @total += (item.quantity)*(item.product.price) %>
+	     <strong>Price: </strong><%= (item.quantity)*(item.product.price) %></br>
+	     <% end %>
+     </td>
+	  </tr>
+	</tbody>
+</table>
+</div>
+
+<div class="col-md-4">
+	
+</div>
+
+<div class="col-md-4">
+<div class="row">
+<strong>Total Amout: </strong><%= @total %></br>
+<strong>Order Placed: </strong><%=@order.created_at %></br>
+<strong>Order Ref: </strong><%= rand(1111111111...9999999999) %>
+</div>
+<div class="row">
+
+</div>
+
+
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+</div>
+<div class="col-md-4">
+<%= image_tag('order.png', :width => "240") %><%= link_to 'Home', root_path %></br>
+<%= link_to "Track Order", '#' %>
+</div>
+</div>

@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
     cart.price ||= 0
     cart.save
     cart
+    
   end
   
 end

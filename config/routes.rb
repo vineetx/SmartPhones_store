@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   delete 'line_item/destroy', to: 'line_item#destroy'
   get 'order/new', to: 'order#new'
   post 'order/create', to: 'order#create'
+  get 'order/show', to: 'order#show'
 end
