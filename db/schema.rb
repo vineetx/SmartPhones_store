@@ -29,12 +29,12 @@ ActiveRecord::Schema.define(version: 20170404115520) do
   create_table "orders", force: :cascade do |t|
     t.string   "name"
     t.string   "address"
-    t.integer  "pin"
-    t.integer  "mobile_no"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "pin",        limit: 7
+    t.integer  "mobile_no",  limit: 11
     t.integer  "customer"
     t.integer  "cart_id"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
   end
 
   create_table "products", force: :cascade do |t|

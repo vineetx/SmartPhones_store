@@ -10,7 +10,7 @@
 	<strong>Quantity: </strong><%= item.quantity %></br>
 	<% @total += (item.quantity)*(item.product.price) %>
 	<strong>Price: </strong><%= (item.quantity)*(item.product.price) %></br>
-	<button><%= link_to 'Destroy', line_item_destroy_path(product: item.product), method: :delete %></button></br>
+	<button><%= link_to 'Remove', line_item_destroy_path(product: item.product), method: :delete %></button></br>
 	</br><% end %>
 </div>
 </div>

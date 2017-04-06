@@ -10,6 +10,7 @@ class OrderController < ApplicationController
 
 	def create
 		@order = Order.new(params.require(:order).permit(:name, :address, :pin, :mobile_no))
+		debugger
 		@order.cart_id = current_cart.id
 		if @order.save
 			redirect_to order_show_path(@order)
