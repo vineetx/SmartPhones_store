@@ -14,6 +14,7 @@
 
   # GET /products/new
   def new
+    
     @product = Product.new
   end
 
